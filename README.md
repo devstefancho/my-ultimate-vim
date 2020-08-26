@@ -77,9 +77,17 @@ path(Mac기준) `~/.config/coc/ultisnips/`<br>
 `javascript.snippets` // .js 파일에 적용되는 snippet<br>
 `vim.snippets` // .vim* 파일에 적용되는 snippet 
 
+## Iterm2 key binding
+
+|Key Combintaion | Action |
+|------|------|
+|&#8984; / | Send:"++"|
+|&#8984; p | Send:":CtrlP\n"|
+
 ## Reference setup (I got setup from these guys, Thanks!!)
 
 [Ben Awad](https://github.com/makccr/dot)<br>
 [ThePrimeagen](https://github.com/erkrnt/awesome-streamerrc/tree/master/ThePrimeagen)<br>
 [MAKC](https://github.com/makccr/dot)<br>
 [DistroTube](https://www.youtube.com/watch?v=47QYCa8AYG4)<br>
+[TheFrugalComputerGuy](https://thefrugalcomputerguy.com/linux/seriespg.php?ser=10002#Vid34)
