@@ -44,7 +44,7 @@ set hidden
 set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
-set expandtab
+set expandtab "instead of tab, insert spaces
 set smartindent
 set nu
 set nowrap
@@ -53,12 +53,16 @@ set noswapfile
 set undofile
 set incsearch
 set termguicolors
-set scrolloff=8
+set scrolloff=8 "Scroll offset
 set noshowmode
 set cmdheight=2
 set updatetime=50
 set shortmess+=c
 set cursorline
+set hlsearch "highlight searched words
+"NOTE :eol is end of the line
+set listchars=eol:↲,tab:→\ ,trail:~,extends:>,precedes:<,space:␣ 
+set nolist "set list => $ is end of the line
 
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
@@ -125,6 +129,8 @@ nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
 nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
 nnoremap <leader>cr :CocRestart
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+"quickly enter new line in normal mode
+nnoremap <Leader>o o<Esc>
 
 " coc config
 let g:coc_global_extensions = [
@@ -134,6 +140,7 @@ let g:coc_global_extensions = [
   \ 'coc-eslint',
   \ 'coc-prettier',
   \ 'coc-json',
+  \ 'coc-marketplace',
   \ ]
 
 inoremap jk <ESC>
@@ -172,6 +179,35 @@ function! SyncTree()
     wincmd p
   endif
 endfunction 
+" autocomplete functions for neoclide/coc.nvim
+"---------------------------------------------------------------------------
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+" <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
+if exists('*complete_info')
+ inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
+"---------------------------------------------------------------------------
 
 "" netrw settings
 let g:netrw_liststyle=3 "Tree style
