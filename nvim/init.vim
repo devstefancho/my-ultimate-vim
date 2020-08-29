@@ -31,6 +31,7 @@ Plug 'scrooloose/nerdcommenter'
 "Plug 'Xuyuanp/nerdtree-git-plugin'
 "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 "Plug 'ryanoasis/vim-devicons'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 ""General-setting
@@ -63,6 +64,7 @@ set hlsearch "highlight searched words
 "NOTE :eol is end of the line
 set listchars=eol:↲,tab:→\ ,trail:~,extends:>,precedes:<,space:␣ 
 set nolist "set list => $ is end of the line
+set foldcolumn=2 
 
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
@@ -131,6 +133,9 @@ nnoremap <leader>cr :CocRestart
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 "quickly enter new line in normal mode
 nnoremap <Leader>o o<Esc>
+"Emmet key
+let g:user_emmet_mode="n"
+let g:user_emmet_leader_key="," "default leader_key is <c-y> with trailing ,(comma)
 
 " coc config
 let g:coc_global_extensions = [
