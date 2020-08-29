@@ -77,12 +77,15 @@ alias vf='vifm'
 [Color schemes](https://github.com/vifm/vifm-colors)
 
 ## Caution!
-_coc-snippets 설정시 주의 사항_
-**snippets의 이름에 따라 적용되는 extension이 다르다.**
+>_ You must know what .snippets are (coc-snippets)_
 
-path(Mac기준) `~/.config/coc/ultisnips/`<br>
-`javascript.snippets` // .js 파일에 적용되는 snippet<br>
-`vim.snippets` // .vim* 파일에 적용되는 snippet 
+**each .snippets file effects on file name**
+for example)<br>
+javascript.snippets works only for .js file
+
+path(for Mac) `~/.config/coc/ultisnips/`<br>
+`javascript.snippets` // snippets for .js <br>
+`vim.snippets` // snippets for .vim*  
 
 ## custom snippets
 
