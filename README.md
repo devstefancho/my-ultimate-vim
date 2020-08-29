@@ -132,5 +132,5 @@ This issue is useful
 [ThePrimeagen](https://github.com/erkrnt/awesome-streamerrc/tree/master/ThePrimeagen)<br>
 [MAKC](https://github.com/makccr/dot)<br>
 [DistroTube](https://www.youtube.com/watch?v=47QYCa8AYG4)<br>
-[TheFrugalComputerGuy](https://thefrugalcomputerguy.com/linux/seriespg.php?ser=10002#Vid34)
+[TheFrugalComputerGuy](https://thefrugalcomputerguy.com/linux/seriespg.php?ser=10002#Vid34)<br>
 [BrodieRobertson](https://github.com/BrodieRobertson)
