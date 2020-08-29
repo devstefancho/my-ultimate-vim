@@ -64,7 +64,10 @@ set hlsearch "highlight searched words
 "NOTE :eol is end of the line
 set listchars=eol:↲,tab:→\ ,trail:~,extends:>,precedes:<,space:␣ 
 set nolist "set list => $ is end of the line
+"Fold setting: when auto save and load fold
 set foldcolumn=2 
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview "If files opened first time maybe you got an error(because you have no mkview yet) but error gone after first time
 
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
@@ -242,3 +245,10 @@ function! ToggleNetrw()
         silent Lexplore
     endif
 endfunction
+
+
+"=================Unorganized settings==================
+"jsx comment 
+let g:NERDCustomDelimiters={
+    \ 'javascript': { 'left': '//', 'right': '', 'leftAlt': '{/*', 'rightAlt': '*/}' },
+\}
