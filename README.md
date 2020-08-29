@@ -97,6 +97,27 @@ then open explorer with netrw (in my setting, shortcut is `<leader>pv`, <leader>
 Edit **javascript.snippets** for javascript file
 ![js.snippets](/img/custom_snippets.png)
 
+## React comment
+
+I use Plugin NerdCommenter
+
+For React user, need to switch from "left and right" to the "leftalt and rightalt" (as we need to comment html_tag out)
+```
+let g:NERDCustomDelimiters={
+\ 'javascript': { 'left': '//', 'right': '', 'leftAlt': '{/*', 'rightAlt': '*/}' },
+\}
+```
+**How to switch delimeters**
+| Hotkey    | link                     |
+|-----------|--------------------------|
+|\<Leader\>ca |NERDCommenterAltDelims    |
+
+`:let g:NERDCustomDelimiters`
+Switches to the alternative set of delimiters.<br>
+(you can find this in nerdcommenter doc)
+
+This issue is useful
+[nerdcommenter#280](https://github.com/preservim/nerdcommenter/issues/280)
 
 ## Iterm2 key binding
 
@@ -112,3 +133,4 @@ Edit **javascript.snippets** for javascript file
 [MAKC](https://github.com/makccr/dot)<br>
 [DistroTube](https://www.youtube.com/watch?v=47QYCa8AYG4)<br>
 [TheFrugalComputerGuy](https://thefrugalcomputerguy.com/linux/seriespg.php?ser=10002#Vid34)
+[BrodieRobertson](https://github.com/BrodieRobertson)
