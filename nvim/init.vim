@@ -223,3 +223,5 @@ let g:netrw_preview=1 "Preview in right side
 set nocompatible "Limit search for your project
 set path+=** "Search all subdirectories with recursively
 set wildmenu "Show multifiles on one line when you :find
+"Root directory:make current directory to root directory
+nnoremap <leader>` :Ntree<CR> 
