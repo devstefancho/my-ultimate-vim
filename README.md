@@ -1,5 +1,12 @@
 # my-ultimate-vim
 
+|Shortcut | Function|
+|----|----|
+|\<leader\>pv | netrw(left explorer)|
+|&#8984; P | ctrlP(bottom explorer)|
+
+![vifm_netrw_ctrlP](/img/vifm_netrw_ctrlP.gif)
+
 ## Vim or Neovim
 
 If you use vim, you do setup in ~/.vimrc<br>
@@ -76,6 +83,17 @@ _coc-snippets 설정시 주의 사항_
 path(Mac기준) `~/.config/coc/ultisnips/`<br>
 `javascript.snippets` // .js 파일에 적용되는 snippet<br>
 `vim.snippets` // .vim* 파일에 적용되는 snippet 
+
+## custom snippets
+
+> customizing your snippets
+
+`:CocCommand snippets.editSnippets`
+
+then open explorer with netrw (in my setting, shortcut is `<leader>pv`, <leader> is spacebar)<br>
+Edit **javascript.snippets** for javascript file
+![js.snippets](/img/custom_snippets.png)
+
 
 ## Iterm2 key binding
 
