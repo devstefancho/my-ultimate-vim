@@ -32,6 +32,7 @@ Plug 'scrooloose/nerdcommenter'
 "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 "Plug 'ryanoasis/vim-devicons'
 Plug 'mattn/emmet-vim'
+Plug 'vimwiki/vimwiki' "take note
 call plug#end()
 
 ""General-setting
