@@ -108,7 +108,7 @@ nnoremap <leader>pv :call ToggleNetrw() <bar> :vertical resize 30<CR>
 nnoremap <Leader>ps :Rg<SPACE>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <Leader>pf :Files<CR>
-nnoremap <Leader><CR> :call Goto_definition() <CR>
+nnoremap <Leader><CR> :<c-u>call <sid>Goto_definition() <CR>
 nnoremap <F4> :so ~/.config/nvim/init.vim<CR>
 nnoremap <Left> :vertical resize -2<CR>
 nnoremap <Right> :vertical resize +2<CR>
@@ -220,21 +220,19 @@ else
 endif
 "open implementation to the right split view(custom function)
 "buggy: If you quit after invoke this function, this function will not work(it will quit your only window)
-let g:first_open=1
-function! Goto_definition() 
-    if g:first_open
-        :vertical split
-        :wincmd l
-        :exe 'normal K'
-        :wincmd h
-        let g:first_open=0
+let s:first_open=1
+function! s:Goto_definition() abort 
+    if s:first_open
+        rightbelow vs "same as :vertical split and :wincmd l
+        normal K 
+        wincmd h
+        let s:first_open=0
     else 
-        :wincmd l
-        :q
-        :vertical split
-        :wincmd l
-        :exe 'normal K'
-        :wincmd h
+        wincmd l "If right split window exists then quit
+        q
+        rightbelow vs
+        normal K
+        wincmd h
     endif
 endfunction
 "---------------------------------------------------------------------------
