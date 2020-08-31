@@ -108,7 +108,8 @@ nnoremap <leader>pv :call ToggleNetrw() <bar> :vertical resize 30<CR>
 nnoremap <Leader>ps :Rg<SPACE>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <Leader>pf :Files<CR>
-nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
+nnoremap <Leader><CR> :call Goto_definition() <CR>
+nnoremap <F4> :so ~/.config/nvim/init.vim<CR>
 nnoremap <Left> :vertical resize -2<CR>
 nnoremap <Right> :vertical resize +2<CR>
 nnoremap <Up> :resize +2<CR>
@@ -217,6 +218,25 @@ if exists('*complete_info')
 else
  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
+"open implementation to the right split view(custom function)
+"buggy: If you quit after invoke this function, this function will not work(it will quit your only window)
+let g:first_open=1
+function! Goto_definition() 
+    if g:first_open
+        :vertical split
+        :wincmd l
+        :exe 'normal K'
+        :wincmd h
+        let g:first_open=0
+    else 
+        :wincmd l
+        :q
+        :vertical split
+        :wincmd l
+        :exe 'normal K'
+        :wincmd h
+    endif
+endfunction
 "---------------------------------------------------------------------------
 
 "" netrw settings
@@ -247,9 +267,11 @@ function! ToggleNetrw()
     endif
 endfunction
 
-
 "=================Unorganized settings==================
 "jsx comment 
 let g:NERDCustomDelimiters={
     \ 'javascript': { 'left': '//', 'right': '', 'leftAlt': '{/*', 'rightAlt': '*/}' },
 \}
+"vimwiki setup
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
