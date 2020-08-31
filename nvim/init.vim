@@ -266,6 +266,7 @@ function! ToggleNetrw()
         silent Lexplore
     endif
 endfunction
+let g:netrw_list_hide= netrw_gitignore#Hide()
 
 "=================Unorganized settings==================
 "jsx comment 
@@ -273,5 +274,5 @@ let g:NERDCustomDelimiters={
     \ 'javascript': { 'left': '//', 'right': '', 'leftAlt': '{/*', 'rightAlt': '*/}' },
 \}
 "vimwiki setup
-let g:vimwiki_list = [{'path': '~/vimwiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
+"let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      "\ 'syntax': 'markdown', 'ext': '.md'}]
