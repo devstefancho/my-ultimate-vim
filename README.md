@@ -120,6 +120,11 @@ Switches to the alternative set of delimiters.<br>
 This issue is useful
 [nerdcommenter#280](https://github.com/preservim/nerdcommenter/issues/280)
 
+## Shortcuts for frequent usage
+|Function | Key | Mode |
+|---------|-----|------|
+|Emmet    |`,,` |normal|
+
 ## Iterm2 key binding
 
 |Key Combintaion | Action |
