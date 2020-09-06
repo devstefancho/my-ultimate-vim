@@ -1,3 +1,6 @@
+""Source file
+source $HOME/.config/nvim/ascii_art.vim
+
 ""Plugin-install
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -33,9 +36,11 @@ Plug 'scrooloose/nerdcommenter'
 "Plug 'ryanoasis/vim-devicons'
 Plug 'mattn/emmet-vim'
 Plug 'vimwiki/vimwiki' "take note
+Plug 'mhinz/vim-startify' "easy way to save and load session
 call plug#end()
 
 ""General-setting
+language en_US
 syntax on
 set number
 set relativenumber
