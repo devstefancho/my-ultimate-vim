@@ -106,7 +106,7 @@ nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
-nnoremap <leader>hh :wincmd h<CR>
+nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 "nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>pv :call ToggleNetrw() <bar> :vertical resize 30<CR>
@@ -144,6 +144,12 @@ nnoremap <leader>cr :CocRestart
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 "quickly enter new line in normal mode
 nnoremap <Leader>o o<Esc>
+
+nmap ghs <Plug>(GitGutterStageHunk)
+xmap ghs <Plug>(GitGutterStageHunk)
+nmap ghu <Plug>(GitGutterUndoHunk)
+nmap ghp <Plug>(GitGutterPreviewHunk)
+
 "Emmet key
 let g:user_emmet_mode="n"
 let g:user_emmet_leader_key="," "default leader_key is <c-y> with trailing ,(comma)
@@ -158,6 +164,18 @@ let g:coc_global_extensions = [
   \ 'coc-json',
   \ 'coc-marketplace',
   \ ]
+"coc snippet
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+
 
 inoremap jk <ESC>
 vmap ++ <plug>NERDCommenterToggle
