@@ -2,7 +2,7 @@
 source $HOME/.config/nvim/ascii_art.vim
 
 ""Plugin-install
-call plug#begin('~/.vim/plugged')
+call plug#begin(stdpath('config') . '/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tweekmonster/gofmt.vim'
 Plug 'tpope/vim-fugitive'
@@ -261,7 +261,7 @@ endfunction
 
 "" netrw settings
 let g:netrw_liststyle=3 "Tree style
-let g:netrw_banner = 0 "Remove banner
+let g:netrw_banner = 1 "Remove banner
 let g:netrw_browse_split = 4 "Open file in previous window
 let g:netrw_altv = 1 "Open vertical split window to the right side
 let g:netrw_preview=1 "Preview in right side 
