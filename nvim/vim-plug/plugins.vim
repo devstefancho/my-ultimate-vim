@@ -35,4 +35,5 @@ Plug 'mattn/emmet-vim'
 Plug 'vimwiki/vimwiki' "take note
 Plug 'mhinz/vim-startify' "easy way to save and load session
 Plug 'liuchengxu/vim-which-key' "displays available keybindings in popup.
+Plug 'honza/vim-snippets'
 call plug#end()
