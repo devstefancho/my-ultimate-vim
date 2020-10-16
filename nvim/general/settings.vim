@@ -31,6 +31,8 @@ set nolist "set list => $ is end of the line
 set foldcolumn=2 "Fold setting: when auto save and load fold
 set clipboard=unnamedplus "Copy and Paste between vim and everything else
 set mouse=a "enable your mouse
+set splitright
+set splitbelow
 
 "cursorline termguicolors
 set background=dark
