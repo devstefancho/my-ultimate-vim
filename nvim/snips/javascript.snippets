@@ -37,10 +37,10 @@ endsnippet
 
 #Reducer Start
 snippet rdap "reducer actions with payload" b
-const ${1} = (${2}) => {
+const ${1} = (${2:payload}) => {
 	return {
-		type: "${3}"
-		payload: ${2}
+		type: "${3}",
+		payload: ${2:payload}
 	}
 }
 ${4}
@@ -48,7 +48,7 @@ endsnippet
 snippet rda "reducer actions without payload" b
 const ${1} = () => {
 	return {
-		type: "${2}"
+		type: "${2}",
 	}
 }
 ${3}
