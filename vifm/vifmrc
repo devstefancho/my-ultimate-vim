@@ -6,6 +6,7 @@
 " The basic format for each item is shown with an example.
 
 " ------------------------------------------------------------------------------
+source $HOME/.config/vifm/vifm-userConfig.vim
 
 " Command used to edit files in various contexts.  The default is vim.
 " If you would like to use another vi clone such as Elvis or Vile
