@@ -1,0 +1,72 @@
+#Reducer Start
+snippet rdap "reducer actions with payload" b
+const ${1:<Action Name>} = (${2:payload}) => {
+	return {
+		type: "${3:<Action Type>}",
+		payload: $2
+	}
+}
+$0
+endsnippet
+snippet rda "reducer actions without payload" b
+const ${1:<Action Name>} = () => {
+	return {
+		type: "${2:<Action Type>}",
+	}
+}
+$0
+endsnippet
+snippet rdfl "reducer function long" b
+const ${1:<Reducer>} = (state=${2:<Initial State>}, action) => {
+	switch(action.type){
+		case "${3:<Case 1>}":
+			return {
+				${4:<State>}
+			}
+		case "${5:<Case 2>}":
+			return {
+				${6:<State>}
+			}
+		default:
+			return ${7:state}
+	}
+}
+
+export default ${1}
+$0
+endsnippet
+#Reducer end
+
+snippet rdfc "redux form component" b
+import React from "react";
+import { Field, reduxForm } from "redux-form";
+
+const renderField = ({ input, label, type, meta }) => (
+<div>
+	<label>{label}</label>
+	<input {...input} type={type} placeholder={label} />
+	{meta.touched && meta.error && <span>{error}</span>}
+</div>
+);
+
+let ${1:<ComponentName>} = (props) => {
+const { handleSubmit } = props;
+
+return (
+	<>
+	<form onSubmit={handleSubmit}>
+		<Field name="${2:<Input Name>}" type="text" label="${3:<Label Name>}" component={renderField} />
+		$0
+	</form>
+	</>
+);
+};
+
+$1 = reduxForm({ form: "${4:<Form Name>}" })(${1});
+
+export default $1;
+endsnippet
+
+snippet rdff "redux function Field" b
+		<Field name="${1:<Input Name>}" type="text" label="${2:<Label Name>}" component={renderField} />
+endsnippet
