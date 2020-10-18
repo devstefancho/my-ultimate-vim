@@ -49,7 +49,7 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>n :noh<CR>
 "jk key instead of ESC key
-inoremap jk <ESC> 
+inoremap jk <ESC>
 
 nmap ghs <Plug>(GitGutterStageHunk)
 xmap ghs <Plug>(GitGutterStageHunk)
@@ -59,7 +59,7 @@ nmap ghp <Plug>(GitGutterPreviewHunk)
 "TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
 "Shift-tab will go back
-nnoremap <S-TAB> :bprevious<CR> 
+nnoremap <S-TAB> :bprevious<CR>
 
 "Better Tabbing
 vnoremap > >gv
@@ -73,7 +73,7 @@ nmap ++ <plug>NERDCommenterToggle
 nmap <F2> <Plug>(coc-rename)
 
 "Netrw: Root directory:make current directory to root directory
-nnoremap <leader>` :Ntree<CR> 
+nnoremap <leader>` :Ntree<CR>
 
 " Explorer
 let g:coc_explorer_global_presets = {
@@ -133,13 +133,13 @@ endfunction
 "open implementation to the right split view(custom function)
 "buggy: If you quit after invoke this function, this function will not work(it will quit your only window)
 let s:first_open=1
-function! s:Goto_definition() abort 
+function! s:Goto_definition() abort
     if s:first_open
         rightbelow vs "same as :vertical split and :wincmd l
-        normal K 
+        normal K
         wincmd h
         let s:first_open=0
-    else 
+    else
         wincmd l "If right split window exists then quit
         q
         rightbelow vs

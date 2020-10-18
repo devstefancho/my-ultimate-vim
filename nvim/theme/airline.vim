@@ -5,7 +5,7 @@ let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
 
-"prevent tab-bufline flash in vim-airline github issue #2025 
+"prevent tab-bufline flash in vim-airline github issue #2025
 let g:airline#extensions#tabline#disable_refresh=1
 
 " enable powerline fonts

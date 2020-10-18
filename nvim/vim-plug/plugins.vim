@@ -22,7 +22,7 @@ Plug 'phanviet/vim-monokai-pro'
 Plug 'flazz/vim-colorschemes'
 Plug 'chriskempson/base16-vim'
 " fuzzy find files
-Plug 'ctrlpvim/ctrlp.vim' 
+Plug 'ctrlpvim/ctrlp.vim'
 " gi gutter
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
