@@ -38,6 +38,6 @@ Plug 'liuchengxu/vim-which-key' "displays available keybindings in popup.
 Plug 'honza/vim-snippets'
 Plug 'drewtempelmeyer/palenight.vim'
 "Plug 'Galooshi/vim-import-js'
-Plug 'ludovicchabant/vim-gutentags' "auto updating ctags for vim-js-file-import plugin
+"Plug 'ludovicchabant/vim-gutentags' "auto updating ctags for vim-js-file-import plugin
 Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'} "import js file such as react component
 call plug#end()

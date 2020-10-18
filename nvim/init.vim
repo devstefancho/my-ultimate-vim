@@ -1,5 +1,6 @@
 source $HOME/.config/nvim/vim-plug/plugins.vim          "vim plugins
-source $HOME/.config/nvim/plug-config/coc.vim           "vim configuration about plugin
+source $HOME/.config/nvim/plug-config/coc.vim
+source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/theme/airline.vim
 source $HOME/.config/nvim/theme/ascii-art.vim
 source $HOME/.config/nvim/theme/color-theme.vim
