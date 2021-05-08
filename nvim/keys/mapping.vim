@@ -16,7 +16,7 @@ nnoremap <C-p> :GFiles<CR>
 nnoremap <Leader>pf :Files<CR>
 nnoremap <Leader><CR> :<c-u>call <sid>Goto_definition() <CR>
 nnoremap <F4> :so ~/.config/nvim/init.vim<CR>
-nnoremap <Left> :vertical resie -2<CR>
+nnoremap <Left> :vertical resize -2<CR>
 nnoremap <Right> :vertical resize +2<CR>
 nnoremap <Up> :resize +2<CR>
 nnoremap <Down> :resize -2<CR>

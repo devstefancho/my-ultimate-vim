@@ -1,13 +1,21 @@
 source $HOME/.config/nvim/vim-plug/plugins.vim          "vim plugins
+"Plugin configs
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
+source $HOME/.config/nvim/plug-config/firenvim.vim
+source $HOME/.config/nvim/plug-config/goyo.vim
+source $HOME/.config/nvim/plug-config/markdown_preview.vim
+"Theme
 source $HOME/.config/nvim/theme/airline.vim
 source $HOME/.config/nvim/theme/ascii-art.vim
 source $HOME/.config/nvim/theme/color-theme.vim
+"set and map
 source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/keys/mapping.vim
 "source $HOME/.config/nvim/keys/which-key.vim
 
+"=================================================================="
+"
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent! loadview
 
@@ -73,5 +81,9 @@ let g:NERDCustomDelimiters={
     \ 'javascript': { 'left': '//', 'right': '', 'leftAlt': '{/*', 'rightAlt': '*/}' },
 \}
 "vimwiki setup
-"let g:vimwiki_list = [{'path': '~/vimwiki/',
-                      "\ 'syntax': 'markdown', 'ext': '.md'}]
+"let g:vimwiki_global_ext=0
+"let g:vimwiki_list = [
+                    "\{
+                    "\'path': '$HOME/projects/tistory_article',
+                    "\ 'ext': '.md'}]
+"let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown'}
