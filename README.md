@@ -18,7 +18,7 @@ For Neovim setup in ~/.config/nvim/init.vim
 `~/.config/vifm/vifmrc`
 
 
-## How to install Plugin for vim and Neovim
+## Install vim-plug to use PlugInstall
 
 1. First enter below command in your terminal
 
